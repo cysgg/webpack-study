@@ -5,7 +5,7 @@ import './css/index.less'
 
 $(
     function(){
-        $('li:odd').css('backgroundColor','red')
+        $('li:odd').css('backgroundColor','green')
         $('li:even').css('backgroundColor',()=>{
             return '#' + 'D97634'
         })

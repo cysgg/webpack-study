@@ -12,7 +12,10 @@ module.exports = {
 	module: {
         rules : [
             {test: /\.css$/,use:['style-loader','css-loader']},
-            {test: /\.less$/,use:['style-loader','css-loader','less-loader']}
+            {test: /\.less$/,use:['style-loader','css-loader','less-loader']},
+            {test: /\.(jpg|png|gif|bmp|jpeg)$/,use: 'url-loader?limit=7631&name=[name].[ext]'},
+            {test: /\.js$/,use: 'babel-loader',exclude : /node_modules/} // 配置Babel 来转换高级的ES语法
+            //limit 给定的值，是图片的大小，单位byte，如果我们引用的图片，大于或等于给定的limit值，则不会转为base64格式字符串，否则会转为base64格式字符串
         ]
     }, // 放置loader加载器，webpack本身只能打包commonjs规范的js文件，用于处理其他文件或语法
 	plugins: [
