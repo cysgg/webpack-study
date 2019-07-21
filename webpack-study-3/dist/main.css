@@ -1,0 +1,6 @@
+.box{
+    color: red;
+    font-size: 30px;
+    display: -webkit-box;
+    display: flex;
+}
