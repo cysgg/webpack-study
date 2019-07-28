@@ -3,17 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-import { Button } from 'mint-ui'
+import { Header } from 'mint-ui';
 
-import './lib/mui/css/mui.min.css'
-
-
-Vue.component('mybtn', Button);
 
 Vue.config.productionTip = false
-
+Vue.component(Header.name, Header);
 /* eslint-disable no-new */
 // Vue.use(MintUI)
 
